@@ -1,20 +1,26 @@
-const PropertyCard = () => {
+import Image from "next/image";
+import Link from "next/link";
+
+const PropertyCard = ({ property }) => {
     return (
         <div class="rounded-xl shadow-md relative">
-            <img
-                src="images/properties/a1.jpg"
+            <Image
+                src={`/images/properties/${property.images[0]}`}
                 alt=""
+                height={0}
+                width={0}
+                sizes="100vw"
                 class='w-full h-auto rounded-t-xl'
             />
             <div class="p-4">
                 <div class="text-left md:text-center lg:text-left mb-6">
-                    <div class="text-gray-600">Apartment</div>
-                    <h3 class="text-xl font-bold">Boston Commons Retreat</h3>
+                    <div class="text-gray-600">{property.type}</div>
+                    <h3 class="text-xl font-bold">{property.name}</h3>
                 </div>
                 <h3
                     class="absolute top-[10px] right-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right"
                 >
-                    $4,200/mo
+                    ${property.rates.monthly}/mo
                 </h3>
 
                 <div class="flex justify-center gap-4 text-gray-500 mb-4">
