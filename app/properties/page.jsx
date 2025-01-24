@@ -1,11 +1,9 @@
 import Link from "next/link";
+import Hero from "@/components/Hero";
 
 const PropertiesPage = () => {
     return (
-        <div>
-            <h1 className="text-3xl" >Properties</h1>
-            <Link href='/' >Go Home</Link>
-        </div>
+        <div>PropertyPage</div>
     )
 }
 
