@@ -15,7 +15,7 @@ const MainLayout = ({ children }) => {
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
-            </body>
+            </body> 
         </html>
     )
 }
